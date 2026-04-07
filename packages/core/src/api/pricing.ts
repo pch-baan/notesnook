@@ -65,12 +65,12 @@ export class Pricing {
     plan: SubscriptionPlanId
   ): Promise<SKUResponse> {
     return http.get(
-      `${hosts.NOTESNOOK_HOST}/api/v2/prices/skus?platform=${platform}&period=${period}&plan=${plan}`
+      `${hosts.SUBSCRIPTIONS_HOST}/api/v2/prices/skus?platform=${platform}&period=${period}&plan=${plan}`
     );
   }
 
   static products(trialsAvailed?: SubscriptionPlan[]): Promise<Plan[]> {
-    const url = new URL(`${hosts.NOTESNOOK_HOST}/api/v2/prices/products`);
+    const url = new URL(`${hosts.SUBSCRIPTIONS_HOST}/subscriptions/plans`);
     if (trialsAvailed)
       url.searchParams.set("trialsAvailed", trialsAvailed.join(","));
     return http.get(url.toString());

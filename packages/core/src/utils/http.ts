@@ -201,7 +201,11 @@ export class RequestError extends Error {
 }
 
 function getHeaders(token?: string | null) {
-  return token ? { Authorization: "Bearer " + token } : undefined;
+  const headers: Record<string, string> = {
+    "ngrok-skip-browser-warning": "true"
+  };
+  if (token) headers["Authorization"] = "Bearer " + token;
+  return headers;
 }
 
 function transformJson(data: JsonRequestBody) {

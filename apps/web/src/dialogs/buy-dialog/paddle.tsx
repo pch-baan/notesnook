@@ -38,7 +38,7 @@ import { Period } from "@notesnook/core";
 
 export const SELLER_ID = IS_DEV ? 1506 : 128190;
 export const CLIENT_PADDLE_TOKEN = IS_DEV
-  ? "test_e29ab18724934c1d35a05a7d2cb"
+  ? process.env.NN_PADDLE_TOKEN ?? ""
   : "live_251f65dc0ac5ac364e44817fe92";
 const PADDLE_ORIGIN = IS_DEV
   ? "https://sandbox-buy.paddle.com"
