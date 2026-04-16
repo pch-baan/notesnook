@@ -1837,7 +1837,7 @@ For example:
   incomingNote: () => t`Incoming note`,
   description: () => t`Description`,
   date: () => t`Date`,
-  month: () => t`month`,
+  month: () => t`Month`,
   day: () => t`Day`,
   time: () => t`Time`,
   encryptionKey: () => t`Encryption key`,
@@ -2225,7 +2225,8 @@ Use this if changes from other devices are not appearing on this device. This wi
   goBackToNotebooks: () => t`Go back to notebooks`,
   goBackToTags: () => t`Go back to tags`,
   okay: () => t`Okay`,
-  clearTrashDesc: () => t`Do you want to clear the trash?`,
+  clearTrashDesc: () =>
+    t`Clearing trash will permanently delete all the items in your trash. This action is IRREVERSIBLE.`,
   createdAt: () => t`Created at`,
   lastEditedAt: () => t`Last edited at`,
   enter6DigitCode: () =>
@@ -2639,5 +2640,8 @@ Use this if changes from other devices are not appearing on this device. This wi
   confirmationEmailSent: () => t`Confirmation email sent`,
   back: () => t`Back`,
   invalidRecoveryKey: () =>
-    t`Invalid recovery key. Make sure to input your account recovery key, not a 2FA recovery code.`
+    t`Invalid recovery key. Make sure to input your account recovery key, not a 2FA recovery code.`,
+  featureNotAvailable: () => t`This feature is not available on this plan.`,
+  valueMustBeBetween: (min: number, max: number) =>
+    t`Value must be between ${min} and ${max}`
 };
